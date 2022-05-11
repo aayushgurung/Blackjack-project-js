@@ -14,12 +14,15 @@ let resetmsg=messageEl.textContent;
 
 const buttonEnds=document.querySelector('#newcard-btn');
 buttonEnds.disabled=true;
+const startgamebtn=document.querySelector('#startgame-btn');
+startgamebtn.disabled=false;
 document.getElementById('newcard-btn').style.display='none';
 
 let message="";
 
 function startgame(){
     rendergame();
+    startgamebtn.disabled=true;
     buttonEnds.disabled=false;
     document.getElementById('newcard-btn').style.display='initial';
 }
@@ -37,6 +40,7 @@ function reset(){
     buttonEnds.disabled=true;
     document.getElementById('newcard-btn').style.display='none';
     arrlength=cardarr.length;
+    startgamebtn.disabled=false;
 }
 
 function rendergame(){
@@ -46,10 +50,12 @@ function rendergame(){
     else if(sum===21){
         message = "You have blackjack";
         document.querySelector('#newcard-btn').innerHTML="PLAY AGAIN??";
+        startgamebtn.disabled=true;
     }
     else{
         message = "You are out of the game";
         document.querySelector('#newcard-btn').innerHTML="PLAY AGAIN??";
+        startgamebtn.disabled=true;
     }
     console.log(message);
     messageEl.textContent=message;
@@ -58,6 +64,7 @@ function rendergame(){
     sumEl.textContent=sum;
 }
 function newcard(){
+    startgamebtn.disabled=true;
     imgEl.textContent=" ";
     if(sum>21||sum===21){
         reset();
@@ -78,11 +85,11 @@ function cardarrprint(){
     let imgarray=['0','1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg','9.jpg','10.jpg','11.jpg','12.jpg','13.jpg'];
    
     for (let index = 0; index < arrlength; index++) {
-        cardEl.textContent+= " " +cardarr[index];
+        // cardEl.textContent+= " " +cardarr[index];
         let cardarrvalue=cardarr[index];
         let img = document.createElement("img");
-        img.style.width="55px";
-        img.style.height="79px";
+        img.style.width=55+50+"px";
+        img.style.height=79+50+"px";
         img.style.padding="10px";
         img.src=imgarray[cardarrvalue];
         // let block=document.getElementById("card-el");
