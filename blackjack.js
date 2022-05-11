@@ -1,7 +1,7 @@
 'use strict';
 
-let firstcard=Math.floor(Math.random()*22)+1;
-let secondcard=Math.floor(Math.random()*22)+1;
+let firstcard=Math.floor(Math.random()*14)+1;
+let secondcard=Math.floor(Math.random()*14)+1;
 let card=0;
 let cardarr=[firstcard,secondcard];
 let sum=firstcard+secondcard;
@@ -17,8 +17,8 @@ document.getElementById('newcard-btn').style.display='none';
 let message="";
 
 function reset(){
-    firstcard=Math.floor(Math.random()*22)+1;
-    secondcard=Math.floor(Math.random()*22)+1;
+    firstcard=Math.floor(Math.random()*14)+1;
+    secondcard=Math.floor(Math.random()*14)+1;
     cardarr=[firstcard,secondcard];
     document.querySelector('#newcard-btn').innerHTML="NEW CARD";
     sum=firstcard+secondcard;
@@ -57,7 +57,7 @@ function newcard(){
         reset();
     }
     else if(sum<=21){
-    let card=Math.floor(Math.random()*22)+1;
+    let card=Math.floor(Math.random()*14)+1;
     sum+=card;
     cardarr.push(card);
     arrlength=cardarr.length;
