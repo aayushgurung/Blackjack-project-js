@@ -1,16 +1,23 @@
 /*Top-Right-Bottom-Left*/
+@font-face {
+  font-family: myFirstFont;
+  src: url(nuku.ttf);
+}
 *{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: myFirstFont;
+  font-size: large;
 }
 body{
-  background-image: url(blackjack.jpg);
   background-size: cover;
   text-align: center;
   color:whitesmoke;
 }
 h1{
-  color:goldenrod;
+  color:#a3b487;
   text-align: center;
+  font-size: 15mm;
+  margin:auto;
+  text-shadow: 2px 2px 8px #302A39;
 }
 #message-el{
   font-weight: bold;
@@ -19,11 +26,11 @@ h1{
 .btn{
   margin: 2px;
   width:150px;
-  color :  #047C47;
+  color :  #093736;
   border-radius: 4px;
   border: none;
   padding: 5px 20px 5px 20px;
-  background-color: goldenrod;
+  background-color: #805335;
   font-weight: bolder;
 
 }
@@ -32,4 +39,60 @@ h1{
 }
 .btn::after{
   border-color: black;
+}
+.bg_center_msg{
+  /* width:fit-content; */
+  margin:auto;
+  width:max-content;
+  border: 100px whitesmoke;
+  border-width: 10cm;
+  border-radius: 1cm;
+  padding: 2px 10px 2px 10px;
+  color:#aea2ae;
+  background-color: #651910;
+}
+#sum{
+  margin:auto;
+  width:max-content;
+  border: 100px whitesmoke;
+  border-width: 10cm;
+  border-radius: 10cm;
+  padding: 0px 10px 0 10px;
+  color:rgb(255, 255, 255);
+  background-color: #a3b487;
+  
+  font-weight: bolder;
+  font-size: 7mm;
+  -webkit-text-stroke: 50%;
+  -webkit-text-stroke-color: black ;
+}
+#bet-id,#bet-id-input{
+  margin: auto;
+  width:max-content;
+  border:none;
+  padding: 5px 10px 5px 10px;
+  border-radius: 1cm;
+  background-color: #093736;
+  color:#FBF397;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+#myVideo{
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+#one{
+  width:max-content;
+  margin:auto;
+  border:none;
+  padding: 1px 1px 1px 1px;
+  box-sizing: content-box;
+  background-color: rgba(220, 201, 214,60%);
 }

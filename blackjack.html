@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,22 +8,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body><div>
+<body>
+    <audio src="bg_audio.mp3" autoplay loop hidden id="audio"></audio>
+    <audio src="button.mp3" id="start-audio" hidden></audio>
+    <audio src="won.mp3" id="won-audio"></audio>
+<div>
     <h1>Black Jack</h1>
-    <p id="message-el">Want to play a round?</p>
-    <p>Cards:</p>
+    <p id="message-el" class="bg_center_msg">Want to play a round?</p><br>
+    <p class="bg_center_msg">Cards:</p><br>
     <p id="card-el"></p>
-    <p id="one"></p>
-    <p>Sum:</p><p id="sum"></p>
+    <p id="one"></p><br>
+    <p class="bg_center_msg">Sum:</p>
+    <p id="sum"></p>
 </div>
-<button id="startgame-btn" class="btn" onclick="startgame()">START GAME</button><br>
-<button id="newcard-btn" class="btn" onclick="newcard() " disabled>NEW CARD</button><br>
+<button id="startgame-btn" class="btn" onclick="startgame()">START GAME</button>
+<button id="newcard-btn" class="btn" onclick="newcard() " disabled>NEW CARD</button>
+<p id="bet-id"></p><br>
+<input id="bet-id-input" class="input-field" type="text" placeholder="ENTER YOUR BET">
 
-<p id="message-final"></p>
-
-    <p id="2"></p>
-    <p id="3"></p>
-<div id="x"></div>
+<video autoplay muted loop id="myVideo">
+    <source src="vid_bg.mp4" type="video/mp4">
+  </video>
     <script src="blackjack.js" defer></script>
 </body>
 </html>
